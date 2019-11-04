@@ -1,0 +1,1 @@
+INSERT INTO MOVIE (NAME, DIRECTOR, POSTER) VALUES('Parasite', 'Joon-ho Bong', 'https://cinemapolis.org/wp-content/uploads/parasite.jpg');
