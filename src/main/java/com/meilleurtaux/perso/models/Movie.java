@@ -1,14 +1,12 @@
 package com.meilleurtaux.perso.models;
 
 import javax.persistence.Column;
-
-//import java.util.Calendar;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import com.meilleurtaux.perso.models.MovieForm;
 
 @Entity
 @Table(name = "MOVIE")
@@ -33,11 +31,16 @@ public class Movie {
 		super();
 	}
     
+    public Movie( Movie formMovie) {
+        this.name = formMovie.getName();
+        this.director = formMovie.getDirector();
+        this.poster = formMovie.getPoster();
+	}
 
-    public Movie(Movie fMovie) {
-        this.name = fMovie.name;
-        this.director = fMovie.director;
-        this.poster = fMovie.poster;
+	public Movie( MovieForm formMovie) {
+        this.name = formMovie.getName();
+        this.director = formMovie.getDirector();
+        this.poster = formMovie.getPoster();
 	}
 	/**
      * @return Long return the id
